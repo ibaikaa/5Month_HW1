@@ -35,18 +35,6 @@ class SearchViewController: UIViewController {
     }
     
     private func searchTakeawaysData(text: String) {
-//        NetworkLayer.shared.findProductsData(text: text) { result in
-//            switch result {
-//            case .success(let model):
-//                self.filteredProducts = model.products
-//                DispatchQueue.main.async {
-//                    self.productsTableView.reloadData()
-//                }
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        }
-        
         Task {
             let productsList = try await NetworkLayer.shared.findProductsData(text: text)
             self.filteredProducts = productsList.products
