@@ -25,7 +25,7 @@ final class NetworkLayer {
             print(error.localizedDescription)
         }
         return orderTypeModelArray
-    }
+    } 
 
     // Fetch method with GET request changed to async
     func fetchProducts() async throws -> MainProductModel {
